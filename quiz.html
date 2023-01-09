@@ -5,17 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="start()">
-    <div class="container">
-        <h2 id="timer">10</h2>
-        <h1 id="question" >Question 1</h1>
-        <button id="choice_1" onclick="userAnswer(this.value)">Choice 1</button>
-        <button id="choice_2" onclick="userAnswer(this.value)">Choice 2</button>
-        <button id="choice_3" onclick="userAnswer(this.value)">Choice 3</button>
-        <button id="choice_4" onclick="userAnswer(this.value)">Choice 4</button>
+<body onload="startQuiz()">
+    <div class="header">
+        <div>
+            <h1><a href="index.html">Quizha</a></h1>
+        </div>
+    </div>
+    <div id="loading-screen">
+        Loading Questions
+    </div>
+    <div id="error-screen" style="display: none;">
+        Quiz Not Available
+    </div>
+    <div class="quiz-container" id="quiz-container" style="display: none;">
+        <div>
+            <h2 id="score">Score 0</h2>
+            <div id="timer"></div>
+
+        </div>
+
+        <div class="questions-details">
+            <h1 id="question" >Question 1</h1>
+            <div id="choices"></div>
+            <p id="quiz-info">
+        </div>
+
 
     </div>
-    <script src="quiz.js"></script>
+    <div class="quiz-finish-container" id="quiz-finish-container" style="display: none;">
+        <div id="see-result">
+            <h1>You Scored <span id="user_score">10</span></h1>
+            <Button onclick="quizResult()" >See Results</Button>
+        </div>
+        <div class="quiz-result">
+
+            <table id="quiz-result-table">
+
+            </table>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>

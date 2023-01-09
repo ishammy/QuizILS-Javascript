@@ -7,9 +7,61 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="openSettings()">
-    <button onclick="generateQuestions()">Get Questions</button>
-    <button onclick="startQuiz()">See Quiz</button>
-    <script src="quiz.js"></script>
+<body onload="loadMenu()">
+    <div class="header">
+        <div>
+            <h1><a href="index.html">Quizha</a></h1>
+        </div>
+
+    </div>
+    <div id="loading-screen">
+        Loading Homescreen
+    </div>
+    <div id="container" class="home-container"style="display: none;">
+
+        <div class="option-box">
+            <div class="options">
+                <p>Category</p>
+                <div id="category-option">
+                
+                </div>
+            </div>
+            <div class="options">
+                <p>Difficulty</p>
+                <div id="difficulty-option">
+    
+                </div>
+            </div>
+            <div class="options">
+                <p>Question Type</p>
+                <div id="types-option">
+    
+                </div>
+            </div>
+
+        </div>
+        <button onclick="goToQuiz('custom')" class="start-quiz-button ">START QUIZ</button>
+
+        <h1>Check out some of my pre-made / custom quizzes</h1>
+        <div class="choose-preset">
+
+            <div>
+                <button onclick="scrollPresets(-1)" class="prev-button"></button>
+            </div>
+            <div class="presets" id="presets">
+
+            </div>
+            <div>
+                <button onclick="scrollPresets(1);" class="next-button"></button>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+        <script src="scripts.js"></script>
+    
+
 </body>
 </html>
